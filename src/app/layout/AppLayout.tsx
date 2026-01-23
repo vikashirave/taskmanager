@@ -13,7 +13,7 @@ export default function AppLayout() {
         {/* Sidebar */}
         <aside className="w-64 bg-gray-800 text-white p-4">
           <nav className="space-y-2">
-            <div className="font-medium">Dashboard</div>
+            <div className="font-medium"> Dashboard (Phase 1 Live 🚀)</div>
             <div className="text-gray-300">Tasks</div>
           </nav>
         </aside>
