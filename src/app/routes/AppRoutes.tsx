@@ -1,12 +1,22 @@
-import { Routes, Route } from 'react-router-dom'
-import Dashboard from '../../pages/Dashboard'
-import NotFound from '../../pages/NotFound'
-import AppLayout from '../layout/AppLayout'
+import { Routes, Route } from "react-router-dom"
+import AppLayout from "../layout/AppLayout"
+import Dashboard from "../../pages/Dashboard"
+import NotFound from "../../pages/NotFound"
+import LoginPage from "../../features/auth/LoginPage"
+import ProtectedRoute from "./ProtectedRoute"
 
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route element={<AppLayout />}>
+      <Route path="/login" element={<LoginPage />} />
+
+      <Route
+        element={
+          <ProtectedRoute>
+            <AppLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route path="/" element={<Dashboard />} />
       </Route>
 
