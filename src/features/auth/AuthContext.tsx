@@ -8,7 +8,7 @@ export type User = {
 
 export type AuthContextType = {
   user: User | null
-  login: (email: string) => void
+  login: (email: string, password: string) => void
   logout: () => void
 }
 

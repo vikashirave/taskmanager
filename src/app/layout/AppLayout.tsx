@@ -1,11 +1,21 @@
 import { Outlet } from "react-router-dom"
+import { useAuth } from "../../features/auth/useAuth";
 
 export default function AppLayout() {
+  const { logout, user } = useAuth();
   return (
     <div className="min-h-screen flex flex-col bg-gray-100 text-gray-900">
       {/* Header */}
       <header className="h-14 bg-white border-b flex items-center px-6">
         <h1 className="text-lg font-semibold">TaskFlow</h1>
+        {user && (
+          <button
+            onClick={logout}
+            className="text-sm text-red-600"
+          >
+            Logout
+          </button>
+        )}
       </header>
 
       {/* Body */}
