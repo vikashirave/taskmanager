@@ -4,6 +4,7 @@ import Dashboard from "../../pages/Dashboard"
 import NotFound from "../../pages/NotFound"
 import LoginPage from "../../features/auth/LoginPage"
 import ProtectedRoute from "./ProtectedRoute"
+import Tasks from "../../pages/Tasks"
 
 export default function AppRoutes() {
   return (
@@ -18,9 +19,9 @@ export default function AppRoutes() {
         }
       >
         <Route path="/" element={<Dashboard />} />
-      </Route>
-
-      <Route path="*" element={<NotFound />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="*" element={<NotFound />} />
+        </Route>
     </Routes>
   )
 }
