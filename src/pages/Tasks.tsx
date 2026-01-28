@@ -1,4 +1,4 @@
-import TaskTable from "../modules/TaskTable";
+import TaskTable from "../modules/tasks/TaskTable";
 
 
 export default function Tasks() {
